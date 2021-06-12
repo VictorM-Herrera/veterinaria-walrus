@@ -1,4 +1,4 @@
 package com.jmissart;
 
-public class Carta{
+public class Pet {
 }
