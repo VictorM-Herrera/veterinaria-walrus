@@ -8,7 +8,7 @@ public class Menu {
     public void menu() {
         scan = new Scanner(System.in);
         boolean salir = false;
-        int opcion; //opcion del usuario
+        int option; //opcion del usuario
         int option2; //opcion del menu del cliente
         int option3; //opcion del menu de agenda
         int option4; //opcion del menu de tienda
@@ -17,9 +17,9 @@ public class Menu {
 
         do {
             //Llamamos al primer menu
-            opcion = firstMenu();
+            option = firstMenu();
 
-            switch (opcion) {
+            switch (option) {
                 case 1:
                     do{
                         option2 = clientMenu();
@@ -78,11 +78,13 @@ public class Menu {
                     } while(option4 != 0);
                     break;
                 case 4:
-                    opcion = 0;
+                    option = 0;
                     break;
             }
 
-        } while (opcion != 0);
+        } while (option != 0);
+
+        scan.close();
     }
 
     public int firstMenu() {
