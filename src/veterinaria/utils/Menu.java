@@ -1,4 +1,4 @@
-package com.jmissart;
+package veterinaria.utils;
 
 import java.util.Scanner;
 
@@ -7,7 +7,6 @@ public class Menu {
 
     public void menu() {
         scan = new Scanner(System.in);
-        boolean salir = false;
         int option; //opcion del usuario
         int option2; //opcion del menu del cliente
         int option3; //opcion del menu de agenda

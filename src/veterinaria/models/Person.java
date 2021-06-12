@@ -1,4 +1,4 @@
-package com.jmissart;
+package veterinaria.models;
 
 public class Person {
     private String name;

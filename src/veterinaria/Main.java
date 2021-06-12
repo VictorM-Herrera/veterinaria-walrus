@@ -1,4 +1,6 @@
-package com.jmissart;
+package veterinaria;
+
+import veterinaria.utils.Menu;
 
 public class Main {
 
@@ -7,5 +9,4 @@ public class Main {
         Menu mainMenu = new Menu();
         mainMenu.menu();
     }
-
 }
