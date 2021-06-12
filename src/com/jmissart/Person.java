@@ -1,6 +1,6 @@
 package com.jmissart;
 
-public class Persona {
+public class Person {
     private int id;
     private String name;
     private String lastName;
@@ -8,7 +8,7 @@ public class Persona {
     private String phone;
     private String address;
 
-    Persona() {
+    Person() {
         id = 0;
         name = "";
         lastName = "";
