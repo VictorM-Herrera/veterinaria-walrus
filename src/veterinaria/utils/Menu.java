@@ -1,4 +1,4 @@
-package com.jmissart;
+package veterinaria.utils;
 
 import java.util.Scanner;
 
