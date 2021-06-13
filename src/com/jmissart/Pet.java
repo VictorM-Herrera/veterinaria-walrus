@@ -1,4 +1,6 @@
 package com.jmissart;
 
-public class Pet {
+public abstract class Pet {
+
+
 }
