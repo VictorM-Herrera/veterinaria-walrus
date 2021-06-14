@@ -1,4 +1,4 @@
-package veterinaria.models;
+package com.jmissart.models;
 
 public abstract class Pet {
     private String name;
