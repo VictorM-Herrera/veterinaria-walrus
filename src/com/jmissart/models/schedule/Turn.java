@@ -1,4 +1,6 @@
-package com.jmissart.models;
+package com.jmissart.models.schedule;
+
+import com.jmissart.models.people.Client;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,5 +15,5 @@ public class Turn {
         this.reason = reason;
         this.date = date;
     }
-    
+
 }
