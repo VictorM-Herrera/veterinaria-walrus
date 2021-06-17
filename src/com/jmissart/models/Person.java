@@ -6,6 +6,7 @@ public abstract class Person {
     private String DNI;
     private String phone;
     private String address;
+    private boolean status;
 
     public Person() {
         name = "";
@@ -13,7 +14,9 @@ public abstract class Person {
         DNI = "";
         phone = "";
         address = "";
+        status = true;
     }
+
     public Person(String name, String lastName, String DNI, String phone, String address)
     {
         this.name = name;
@@ -21,6 +24,7 @@ public abstract class Person {
         this.DNI = DNI;
         this.phone = phone;
         this.address=address;
+        status = true;
     }
 
     @Override

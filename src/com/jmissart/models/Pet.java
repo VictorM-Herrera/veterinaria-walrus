@@ -19,6 +19,7 @@ public abstract class Pet {
         this.age=age;
         this.sex=sex;
     }
+
     public abstract String getRace();
 
     @Override
