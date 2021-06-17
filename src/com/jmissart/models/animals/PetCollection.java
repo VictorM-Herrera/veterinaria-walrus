@@ -9,7 +9,4 @@ public class PetCollection<E extends Pet> {
     public PetCollection() {
         petList = new ArrayList<E>();
     }
-
-
-
 }
