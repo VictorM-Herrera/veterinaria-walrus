@@ -1,6 +1,4 @@
-package com.jmissart.models.animals;
-
-import com.jmissart.models.animals.Pet;
+package com.jmissart.models;
 
 import java.util.ArrayList;
 
@@ -11,4 +9,7 @@ public class PetCollection<E extends Pet> {
     public PetCollection() {
         petList = new ArrayList<E>();
     }
+
+
+
 }
