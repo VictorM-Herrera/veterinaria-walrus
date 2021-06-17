@@ -1,6 +1,6 @@
-package com.jmissart.models;
+package com.jmissart.models.animals;
 
-public class Other extends Pet{
+public class Other extends Pet {
     private String specie;
 
     public Other(){
