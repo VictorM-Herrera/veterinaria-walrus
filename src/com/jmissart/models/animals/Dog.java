@@ -1,6 +1,7 @@
-package com.jmissart.models;
+package com.jmissart.models.animals;
 
-public class Dog extends Pet{
+
+public class Dog extends Pet {
 
     public Dog() {
         super();
