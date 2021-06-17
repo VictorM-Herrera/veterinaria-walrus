@@ -1,6 +1,9 @@
-package veterinaria;
+package com.jmissart;
 
-import veterinaria.utils.Menu;
+import com.jmissart.models.Cat;
+import com.jmissart.models.Pet;
+import com.jmissart.models.PetList;
+import com.jmissart.utils.Menu;
 
 public class Main {
 
