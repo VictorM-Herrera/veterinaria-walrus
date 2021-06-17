@@ -1,4 +1,7 @@
-package com.jmissart.models;
+package com.jmissart.models.people;
+
+import com.jmissart.models.animals.PetCollection;
+import com.jmissart.models.animals.Pet;
 
 public class Client {
     private static int clientsQuantity = 0;

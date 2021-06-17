@@ -1,4 +1,4 @@
-package com.jmissart.models;
+package com.jmissart.models.animals;
 
 public abstract class Pet {
     private String name;

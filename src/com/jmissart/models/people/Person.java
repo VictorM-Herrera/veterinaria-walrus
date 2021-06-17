@@ -1,4 +1,4 @@
-package com.jmissart.models;
+package com.jmissart.models.people;
 
 public abstract class Person {
     private String name;
