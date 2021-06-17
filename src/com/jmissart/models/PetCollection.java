@@ -1,14 +1,14 @@
 package com.jmissart.models;
 
-import com.jmissart.utils.IPetList;
+import com.jmissart.utils.IPetCollection;
 
 import java.util.ArrayList;
 
-public class PetList<E extends Pet> implements IPetList {
+public class PetCollection<E extends Pet> implements IPetCollection<E> {
 
     private ArrayList<E> petList;
 
-    public PetList() {
+    public PetCollection() {
         petList = new ArrayList<E>();
     }
 
