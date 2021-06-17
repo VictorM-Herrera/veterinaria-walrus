@@ -1,9 +1,13 @@
-package com.jmissart.models.animals;
+package com.jmissart.models;
 
-public class Bird extends Pet {
+public class Bird extends Pet{
 
     public Bird(){
         super();
+    }
+
+    public Bird(String name, int age, char sex,float weight, float height, String dniOwner){
+        super(name, age, sex, weight, height, dniOwner);
     }
 
 

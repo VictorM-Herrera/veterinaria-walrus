@@ -1,10 +1,14 @@
-package com.jmissart.models.animals;
+package com.jmissart.models;
 
 public abstract class Pet {
     private String name;
     private int age;
     private char sex;//m o f
     private String race;
+    private float weight;
+    private float height;
+    private String dniOwner;
+    private boolean status;//true=exist or false=removed
 
     public Pet()
     {
@@ -12,14 +16,21 @@ public abstract class Pet {
         age=0;
         sex='m';
         race="";
+        weight= 0f;
+        height= 0f;
+        dniOwner= "";
+        status=true;
     }
-    public Pet(String name, int age, char sex)
+    public Pet(String name, int age, char sex,float weight, float height, String dniOwner)
     {
         this.name=name;
         this.age=age;
         this.sex=sex;
+        this.weight= weight;
+        this.height= height;
+        this.dniOwner=dniOwner;
+        status=true;
     }
-
     public abstract String getRace();
 
     @Override
@@ -28,7 +39,11 @@ public abstract class Pet {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", sex=" + sex +
-                ", race=" + getRace() +
+                ", race='" + race + '\'' +
+                ", weight=" + weight +
+                ", height=" + height +
+                ", dniOwner='" + dniOwner + '\'' +
+                ", status=" + status +
                 '}';
     }
 }
