@@ -1,6 +1,7 @@
 package com.jmissart;
 
 import com.jmissart.models.people.Client;
+import com.jmissart.models.people.ClientCollection;
 import com.jmissart.models.schedule.Schedule;
 import com.jmissart.models.schedule.Turn;
 
@@ -14,7 +15,7 @@ public class Main {
         /*
         Menu mainMenu = new Menu();
         mainMenu.menu();*/
-
+/*
         Client julian = new Client("");
         Schedule schedule;
         schedule = new Schedule();
@@ -28,9 +29,12 @@ public class Main {
         schedule.add(turno);
         schedule.add(turno2);
         System.out.println(schedule.showCollection());
+*/
+        Client julian = new Client("VISA");
+        Turn turno = new Turn(julian, "lala", new Date());
+        ClientCollection clientcoll = new ClientCollection();
 
-
-
+        clientcoll.add(turno);
 
     }
 }
