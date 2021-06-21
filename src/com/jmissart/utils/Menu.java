@@ -1,5 +1,7 @@
 package com.jmissart.utils;
 
+import com.jmissart.models.schedule.Schedule;
+
 import java.util.Scanner;
 
 public class Menu {
