@@ -15,5 +15,41 @@ public class Turn {
         this.reason = reason;
         this.date = date;
     }
+    //Constructor Vacio
+    public Turn() {
 
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "Turn{" + super.toString() +
+                "client=" + client +
+                ", reason='" + reason + '\'' +
+                ", date=" + date +
+                '}';
+    }
 }
