@@ -30,8 +30,8 @@ public class Schedule implements ICollections{
     }
 
     @Override
-    public void create(Object e) {
-        //Variable auxiliar tipo Turn
+    public void create() {
+        /*//Variable auxiliar tipo Turn
         Turn turn = new Turn();
         String reason = "";
 
@@ -45,7 +45,7 @@ public class Schedule implements ICollections{
         reason = scan.nextLine();
         turn.setReason(reason);
 
-        turnList.add(turn); //Agregamos el turno a la lista
+        turnList.add(turn); //Agregamos el turno a la lista*/
     }
 
     @Override

@@ -30,11 +30,23 @@ public class Main {
         schedule.add(turno2);
         System.out.println(schedule.showCollection());
 */
-        Client julian = new Client("VISA");
+  /*      Client julian = new Client("VISA");
         Turn turno = new Turn(julian, "lala", new Date());
         ClientCollection clientcoll = new ClientCollection();
 
         clientcoll.add(turno);
+*/
+
+        ClientCollection ct = new ClientCollection();
+        ct.create();
+        ct.create();
+
+        System.out.println("Colección de clientes: ");
+        System.out.println(ct.showCollection());
+
+        Client asdf;
+        asdf = (Client) ct.search("30");
+        System.out.println("Cliente encontrado: " + (asdf.toString()));
 
     }
 }
