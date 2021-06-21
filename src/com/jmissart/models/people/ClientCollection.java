@@ -8,5 +8,4 @@ public class ClientCollection {
     ClientCollection() {
         clientSet = new HashSet<Client>();
     }
-
 }
