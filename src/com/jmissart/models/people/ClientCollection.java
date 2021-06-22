@@ -3,12 +3,16 @@ package com.jmissart.models.people;
 import com.jmissart.models.exception.NotAClientObjectExcpetion;
 import com.jmissart.utils.ICollections;
 
+import java.io.*;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Scanner;
 
 public class ClientCollection implements ICollections {
-    private HashSet<Client> clientSet;
+    public HashSet<Client> clientSet;
+    FileOutputStream fos;
+    ObjectOutputStream fobj;
+    File file;
 
     public ClientCollection() {
         clientSet = new HashSet<Client>();
@@ -29,16 +33,15 @@ public class ClientCollection implements ICollections {
     }
 
     @Override
-    public void create() {
+    public void create(String e) {
         // TODO verificar si ya existe con hashCode, verificaciones en general.
         Scanner scan = new Scanner(System.in);
         String name, lastName, DNI, phone, address, paymentMethod;
+        DNI = e;
         System.out.println("Nombre: ");
         name = scan.nextLine();
         System.out.println("Apellido: ");
         lastName = scan.nextLine();
-        System.out.println("DNI: ");
-        DNI = scan.nextLine();
         System.out.println("Teléfono: ");
         phone = scan.nextLine();
         System.out.println("Dirección: ");
@@ -48,6 +51,7 @@ public class ClientCollection implements ICollections {
         Client aux = new Client(name, lastName, DNI, phone, address, paymentMethod);
 
         if(aux != null) {
+            writeClient(aux);
             clientSet.add(aux);
         }
     }
@@ -59,7 +63,9 @@ public class ClientCollection implements ICollections {
         while (it.hasNext())
         {
             Client aux = (Client)it.next();
-            builder.append(aux+"\n");
+            if(aux.isStatus()) {
+                builder.append(aux).append("\n");
+            }
         }
         return builder.toString();
     }
@@ -85,12 +91,58 @@ public class ClientCollection implements ICollections {
     }
 
     @Override
-    public String showElementByX(String data) {
-        return null;
+    public void showElementByX(String data) {
+        Iterator<Client> it = clientSet.iterator();
+        Client found = null;
+        while (it.hasNext())
+        {
+            Client aux = (Client)it.next();
+            if(aux.getDNI().equals(data)) {
+                found = aux;
+                System.out.println(found.toString());
+                break;
+            }
+        }
     }
 
     @Override
     public void remove(Object e) {
+        if(e instanceof Client) {
+            ((Client) e).setStatus(false);
+            clientSet.add((Client) e);
+        }
+    }
 
+    private void writeClient(Client c) { // Recibimos un cliente c
+        file = new File("Clients.dat");
+        if (!file.exists()){
+            try{
+                file.createNewFile();
+                System.out.println(file.getName() + " ha sido creado.");
+            }catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try {
+            fos = new FileOutputStream("Clients.dat"); // Inicializamos el constructor del archivo
+            fobj = new ObjectOutputStream(fos); // Inicializamos el OutputStream de Objetos y le pasamos el constructor del archivo)
+            fobj.writeObject(c); // Guardamos el objeto.
+        }
+        catch(FileNotFoundException e) { // Excepcion para Archivos
+            e.printStackTrace();
+        } catch (IOException e) { // Excepcion de no se que
+            e.printStackTrace();
+        }
+        finally { // Cerramos los streams de outputs
+            try{
+                fos.close();
+                fobj.close();
+            }
+            catch(IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
+

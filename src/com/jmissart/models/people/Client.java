@@ -57,6 +57,11 @@ public class Client extends Person {
         this.petList = petList;
     }
 
+    @Override
+    public int hashCode() {
+        return 1;
+    }
+
     // TODO mostrar lista de mascotas
     @Override
     public String toString() {

@@ -30,7 +30,7 @@ public class Schedule implements ICollections{
     }
 
     @Override
-    public void create() {
+    public void create(String e) {
         /*//Variable auxiliar tipo Turn
         Turn turn = new Turn();
         String reason = "";
@@ -72,8 +72,7 @@ public class Schedule implements ICollections{
     } //FUNCION SIN TERMINAR, FALTA GETTER DEL CLIENTE
 
     @Override
-    public String showElementByX(String data) {
-        return null;
+    public void showElementByX(String data) {
     }
 
     @Override
